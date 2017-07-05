@@ -1,0 +1,25 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+use feature 'say';
+my(@array, $tmp);
+@array = 5..9;
+
+foreach $tmp (@array)
+{
+    say $tmp;
+}
+
+say "use pop , pop out :".pop(@array);
+
+foreach $tmp (@array)
+{
+    say $tmp;
+}
+
+say "push 999";
+push @array, 999;
+foreach $tmp (@array)
+{
+    say $tmp;
+}

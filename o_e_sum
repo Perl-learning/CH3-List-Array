@@ -5,11 +5,30 @@ use strict;
 use feature 'say';
 
 my (@odd, @even, $zero_num, $tmp);
-
+$zero_num = 0;
 foreach $tmp (@ARGV)
 {
-    if ()
-
-
-
+    if ($tmp % 2 == 0)
+    {
+         push @even, $tmp;
+         if ($tmp == 0)
+         {
+             $zero_num++;
+         }
+    }
+    elsif ($tmp % 2 == 1)
+    {
+        push @odd, $tmp;
+    }
 }
+say "odd: ";
+foreach $tmp (@odd)
+{
+    say $tmp;
+}
+say "even : ";
+foreach $tmp (@even)
+{
+    say $tmp;
+}
+say "0 : $zero_num";
