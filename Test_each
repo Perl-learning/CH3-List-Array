@@ -1,0 +1,16 @@
+#! /usr/bin/perl
+
+use strict;
+use warnings;
+use feature 'say';
+
+my @rocks = qw/ aaa bbb ccc ddd /;
+while (my ($index, $value) = each @rocks) {
+  say "$index: $value";
+}
+
+my %sss = ("pig"=>000, "cat"=>999, "sss"=>6546);
+
+while (my ($index, $value) = each %sss) {
+  say "$index: $value";
+}

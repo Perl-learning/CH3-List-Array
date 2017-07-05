@@ -23,3 +23,8 @@ foreach $tmp (@array)
 {
     say $tmp;
 }
+
+foreach (1..10)
+{
+    say "The foreach Default var : $_";
+}
