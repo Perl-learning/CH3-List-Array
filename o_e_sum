@@ -22,13 +22,25 @@ foreach $tmp (@ARGV)
     }
 }
 say "odd: ";
+my ($sum_odd, $sum_even) = (0, 0);
 foreach $tmp (@odd)
 {
+    $sum_odd += $tmp;
     say $tmp;
+    if ($tmp == $odd[$#odd])
+    {
+        say "The sum of odd is : $sum_odd";
+    }
 }
 say "even : ";
 foreach $tmp (@even)
 {
+    $sum_even += $tmp;
     say $tmp;
+    if ($tmp == $even[$#even])
+    {
+        say "The sum of even is : $sum_even";
+        last;
+    }
 }
 say "0 : $zero_num";
