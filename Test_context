@@ -1,0 +1,14 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use feature 'say';
+
+my (@price, @sorted, $num);
+
+@price = qw (111 888 333 222);
+@sorted = sort (@price);
+$num = @price;             # 0+4
+
+say @sorted;                   # 偷懶這樣寫XD 會得到 111222333888
+say $num;                      # 4

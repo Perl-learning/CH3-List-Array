@@ -1,16 +1,25 @@
-#! /usr/bin/perl
+#!/usr/bin/perl
 
 use strict;
 use warnings;
 use feature 'say';
 
-my @rocks = qw/ aaa bbb ccc ddd /;
-while (my ($index, $value) = each @rocks) {
+my @arr = qw/ ccc bbb aaa ddd /;
+say "\n======Before sort======\n";
+while (my ($index, $value) = each @arr) {
   say "$index: $value";
 }
 
-my %sss = ("pig"=>000, "cat"=>999, "sss"=>6546);
+@arr = sort @arr;
+say "\n======After sort======\n";
+while (my ($index, $value) = each @arr) {        #same as foreach $index (0 .. $#arr)
+  say "$index: $value";
+}
 
-while (my ($index, $value) = each %sss) {
+say "\n======Test Hash and Each======\n";
+
+my %hash_test = ("pig"=>111, "cat"=>999, "sss"=>6546);
+
+while (my ($index, $value) = each %hash_test) {
   say "$index: $value";
 }
